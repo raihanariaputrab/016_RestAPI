@@ -66,15 +66,26 @@ fun OnError(retryAction: () -> Unit, modifier: Modifier = Modifier){
     }
 }
 @Composable
-fun KontakLayout(kontak: List<Kontak>, modifier: Modifier = Modifier){
+fun KontakLayout(
+    kontak: List<Kontak>,
+    modifier: Modifier = Modifier,
+    onDetailClick: (Kontak) -> Unit,
+    onDeleteClick: (Kontak) -> Unit = {}
+){
     LazyColumn(
         modifier = modifier,
         contentPadding = PaddingValues(16.dp),
     ){
         items(kontak) {kontak ->
-            KontakCard(kontak = kontak, modifier = Modifier
+            KontakCard(
+                kontak = kontak,
+                modifier = Modifier
                 .fillMaxWidth()
-                .clickable {})
+                .clickable {onDetailClick(kontak)},
+            onDeleteClick = {
+                onDeleteClick(kontak)
+            }
+            )
         }
     }
 }

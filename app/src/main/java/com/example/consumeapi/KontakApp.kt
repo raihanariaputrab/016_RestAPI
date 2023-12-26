@@ -1,3 +1,5 @@
+@file:OptIn(ExperimentalMaterial3Api::class)
+
 package com.example.consumeapi
 
 import androidx.compose.foundation.layout.fillMaxSize
@@ -53,4 +55,15 @@ fun TopAppBar(scrollBehavior: TopAppBarScrollBehavior, modifier: Modifier = Modi
         },
         modifier = modifier
     )
+}
+
+@Composable
+fun TopAppBarKontak(
+    title: String,
+    canNavigateBack: Boolean,
+    modifier: Modifier = Modifier,
+    scrollBehavior: TopAppBarScrollBehavior? = null,
+    navigateUp: () -> Unit = {}
+){
+
 }

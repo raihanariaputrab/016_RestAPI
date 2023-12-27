@@ -56,6 +56,5 @@ fun FormInputSiswa(
             thickness = 8.dp,
             modifier = Modifier.padding(bottom = 12.dp)
         )
-
     }
 }

@@ -3,11 +3,13 @@ package com.example.consumeapi.ui.home.screen
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
 import com.example.consumeapi.ui.home.viewmodel.InsertUiEvent
 
@@ -35,6 +37,15 @@ fun FormInputSiswa(
             value = insertUiEvent.email,
             onValueChange ={onValueChange(insertUiEvent.copy(email = it))},
             label = { Text("Email") },
+            singleLine = true,
+            modifier = Modifier.fillMaxWidth(),
+            enabled = enabled
+        )
+        OutlinedTextField(
+            value = insertUiEvent.telpon,
+            onValueChange ={onValueChange(insertUiEvent.copy(telpon = it))},
+            keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
+            label = { Text("Telepon") },
             singleLine = true,
             modifier = Modifier.fillMaxWidth(),
             enabled = enabled

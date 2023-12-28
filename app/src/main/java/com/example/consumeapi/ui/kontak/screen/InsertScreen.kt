@@ -127,8 +127,8 @@ fun FormInputSiswa(
             singleLine = true
         )
         OutlinedTextField(
-            value = insertUiEvent.telpon,
-            onValueChange = { onValueChange(insertUiEvent.copy(telpon = it)) },
+            value = insertUiEvent.nohp,
+            onValueChange = { onValueChange(insertUiEvent.copy(nohp = it)) },
             label = { Text("No HP") },
             modifier = Modifier.fillMaxWidth(),
             enabled = enabled,

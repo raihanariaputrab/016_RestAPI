@@ -23,15 +23,16 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.consumeapi.PenyediaViewModel
 import com.example.consumeapi.TopAppBarKontak
 import com.example.consumeapi.navigation.DestinasiNavigasi
-import com.example.consumeapi.ui.home.viewmodel.InsertUiEvent
-import com.example.consumeapi.ui.home.viewmodel.InsertUiState
-import com.example.consumeapi.ui.home.viewmodel.InsertViewModel
+import com.example.consumeapi.ui.kontak.viewmodel.InsertUiEvent
+import com.example.consumeapi.ui.kontak.viewmodel.InsertUiState
+import com.example.consumeapi.ui.kontak.viewmodel.InsertViewModel
 import kotlinx.coroutines.launch
 
 object DestinasiEntry : DestinasiNavigasi {
     override val route = "item_entry"
     override val titleRes = "Entry Siswa"
 }
+
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun EntryKontakScreen(
@@ -69,6 +70,8 @@ fun EntryKontakScreen(
 
     }
 }
+
+
 @Composable
 fun EntryKontakBody(
     insertUiState: InsertUiState,
